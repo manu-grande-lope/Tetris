@@ -1,0 +1,205 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Pokemon-GB";
+    src: url(../font/Pokemon-GB.ttf);
+}
+
+.cuerpo {
+    display: flex;
+    position: relative;
+    background-color: #C6CFA2;
+}
+
+/* contenedor img*/
+
+.img {
+    position: absolute;
+    left: 50%;
+    /* le restamos la mitad de su tamaño para centrarlo */
+    margin-left: -150px;
+}
+
+.contenedor__img {
+    width: 300px;
+    background-size: cover;
+    background-size: 100% 100%;
+}
+
+/* pinta la parte externa de cada bloque */
+
+.bloque__contenedor {
+    display: flex;
+    opacity: 0.2;
+    margin: 2px;
+    border: 5px solid black;
+    padding: 3px;
+}
+
+.bloque__contenedor_mini {
+    display: flex;
+    opacity: 0.2;
+    margin: 2px;
+    border: 5px solid black;
+    padding: 3px;
+}
+
+/* pintar el cuadrado interno de cada bloque */
+
+.bloque__interior {
+    align-self: center;
+    justify-self: center;
+    background-color: black;
+    width: 10px;
+    height: 10px;
+}
+
+.bloque__interior_mini {
+    align-self: center;
+    justify-self: center;
+    background-color: black;
+    width: 10px;
+    height: 10px;
+}
+
+/* contenedor del juego */
+
+.contenedor__juego {
+    position: absolute;
+    top: 270px;
+    left: 25%;
+    border: 1px solid black;
+    height: 605px;
+    width: 305px;
+    display: grid;
+    padding: 1px;
+    grid-template-columns: repeat(10, 30px);
+    grid-template-rows: repeat(20, 30px);
+}
+
+.tetrominio {
+    opacity: 0.8;
+}
+
+.final_line {
+    visibility: hidden;
+}
+
+/* aqui empieza el contenedor de la score*/
+
+.contenedor__score-posicion {
+    position: absolute;
+    top: 400px;
+    left: 50%;
+}
+
+.contenedor__score {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: 40%;
+    top: 50%;
+    border: 2px solid black;
+    padding: 1rem;
+    font-family: "Pokemon-GB";
+}
+
+.contenedor__score-numero {
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 30px;
+    margin: 1rem;
+}
+
+.contenedor__score-move {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: "Pokemon-GB";
+}
+
+.contenedor__score-cuadrados {
+    border: 1px solid black;
+    padding: 1px;
+    display: grid;
+    grid-template-columns: repeat(4, 30px);
+    grid-template-rows: repeat(4, 30px);
+}
+
+.contenedor__gameover {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 80vh;
+    margin-top: 40vh;
+    width: 280px;
+    height: 250px;
+    color: #000000;
+    background-color: #C6CFA2;
+    -webkit-box-shadow: 0px 0px 0px 4px #868D6B, 0px 0px 0px 6px #ACB48B, 0px 0px 0px 9px #424245, 0px 0px 0px 9px #424245, inset 0px 0px 0px 4px #3f4638;
+    box-shadow: 0px 0px 0px 4px #868D6B, 0px 0px 0px 6px #ACB48B, 0px 0px 0px 9px #424245, 0px 0px 0px 9px #424245, inset 0px 0px 0px 4px #3f4638;
+    z-index: 1;
+    font-family: "Pokemon-GB";
+}
+
+.contenedor__gameover--p {
+    margin-left: 20px;
+    font-size: larger;
+    margin-top: 20px;
+}
+
+.contenedor__gameover--p2 {
+    margin-top: -20px;
+    margin-left: 10px;
+}
+
+/* ------------ BOTONES ------------ */
+
+.botonAudio__style {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border: 1px solid #000000;
+    width: 150px;
+    height: 60px;
+    background-color: #C6CFA2;
+    font-family: "Pokemon-GB";
+    line-height: 18px;
+}
+
+.botonAudio__style:active {
+    background-color: #70745b;
+}
+
+.boton__repetir {
+    width: 150px;
+    height: 60px;
+    margin-bottom: 20px;
+    border: 1px solid #000000;
+    background-color: #C6CFA2;
+    color: #000000;
+    font-weight: bolder;
+    font-family: 'Pokemon-GB';
+}
+
+.boton__repetir:hover {
+    background-color: #72765d;
+}
+
+.gameover__off {
+    visibility: hidden;
+}
+
+.gameover__on {
+    visibility: visible;
+}
